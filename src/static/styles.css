@@ -187,7 +187,9 @@ section h3 {
   margin-top: auto;
   padding-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Activity Tag */
@@ -273,7 +275,7 @@ section h3 {
   color: var(--secondary-text);
   margin-top: 10px;
   padding: 6px 12px;
-  width: 100%;
+  flex: 1;
   font-weight: bold;
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(255, 111, 0, 0.2);
@@ -474,6 +476,65 @@ footer {
   padding: 10px;
   color: var(--text-secondary);
   font-size: 0.8rem;
+}
+
+/* Share button and dropdown */
+.share-container {
+  position: relative;
+  display: inline-block;
+}
+
+.share-button {
+  background-color: var(--background);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.2s;
+}
+
+.share-button:hover {
+  background-color: var(--border);
+}
+
+.share-dropdown {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  right: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.share-option {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s;
+  width: 100%;
+}
+
+.share-option:hover {
+  background-color: var(--background);
+  color: var(--text-primary);
 }
 
 /* Search and Filter Components - Updated for Sidebar */
